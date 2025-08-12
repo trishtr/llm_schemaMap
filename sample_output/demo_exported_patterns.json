@@ -1,0 +1,179 @@
+{
+  "field_patterns": {
+    "email": {
+      "keywords": [
+        "email",
+        "mail",
+        "e-mail",
+        "email_address"
+      ],
+      "validation": {
+        "type": "regex",
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        "description": "Email address format",
+        "threshold": 0.7
+      },
+      "field_type": "email_field"
+    },
+    "phone": {
+      "keywords": [
+        "phone",
+        "tel",
+        "mobile",
+        "cell",
+        "phone_number"
+      ],
+      "validation": {
+        "type": "regex",
+        "pattern": "^[+]?[\\d\\s\\-\\(\\)]{7,}$",
+        "description": "Phone number format",
+        "threshold": 0.7
+      },
+      "field_type": "phone_field"
+    },
+    "identifier": {
+      "keywords": [
+        "id",
+        "key",
+        "pk",
+        "fk",
+        "_id"
+      ],
+      "validation": {
+        "type": "numeric",
+        "description": "Numeric identifier",
+        "threshold": 0.8
+      },
+      "field_type": "identifier_field"
+    },
+    "date": {
+      "keywords": [
+        "date",
+        "time",
+        "created",
+        "updated",
+        "birth",
+        "dob",
+        "dt"
+      ],
+      "validation": {
+        "type": "date_format",
+        "description": "Date/time format",
+        "threshold": 0.7
+      },
+      "field_type": "datetime_field"
+    },
+    "monetary": {
+      "keywords": [
+        "price",
+        "amount",
+        "cost",
+        "value",
+        "total",
+        "sum",
+        "spent",
+        "lifetime"
+      ],
+      "validation": {
+        "type": "numeric_range",
+        "min": 0,
+        "max": 1000000,
+        "description": "Monetary value range",
+        "threshold": 0.8
+      },
+      "field_type": "monetary_field"
+    },
+    "postal_code": {
+      "keywords": [
+        "zip",
+        "postal",
+        "postcode",
+        "zipcode"
+      ],
+      "validation": {
+        "type": "regex",
+        "pattern": "^[A-Z0-9\\s-]{3,10}$",
+        "description": "Postal code format",
+        "threshold": 0.7
+      },
+      "field_type": "postal_field"
+    },
+    "url": {
+      "keywords": [
+        "url",
+        "link",
+        "website",
+        "web",
+        "site"
+      ],
+      "validation": {
+        "type": "regex",
+        "pattern": "^https?://[\\w\\-\\.]+\\.[a-zA-Z]{2,}(/\\S*)?$",
+        "description": "URL format",
+        "threshold": 0.7
+      },
+      "field_type": "url_field"
+    },
+    "name": {
+      "keywords": [
+        "name",
+        "first",
+        "last",
+        "fname",
+        "lname",
+        "f_name",
+        "l_name"
+      ],
+      "validation": {
+        "type": "text_format",
+        "description": "Name format (letters and spaces)",
+        "threshold": 0.8
+      },
+      "field_type": "name_field"
+    },
+    "status": {
+      "keywords": [
+        "status",
+        "state",
+        "active",
+        "is_active"
+      ],
+      "validation": {
+        "type": "boolean_like",
+        "description": "Boolean or status indicator",
+        "threshold": 0.7
+      },
+      "field_type": "status_field"
+    },
+    "quantity": {
+      "keywords": [
+        "quantity",
+        "qty",
+        "count",
+        "number",
+        "stock",
+        "inventory"
+      ],
+      "validation": {
+        "type": "numeric",
+        "description": "Numeric quantity",
+        "threshold": 0.8
+      },
+      "field_type": "quantity_field"
+    },
+    "sku": {
+      "keywords": [
+        "sku",
+        "product_code",
+        "item_code"
+      ],
+      "validation": {
+        "type": "regex",
+        "pattern": "^[A-Z]{2,3}\\d{4,6}$",
+        "description": "SKU format: 2-3 letters + 4-6 digits",
+        "threshold": 0.8
+      },
+      "field_type": "sku_field"
+    }
+  }
+}
