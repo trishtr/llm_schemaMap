@@ -2,7 +2,7 @@
 
 A powerful and efficient data profiling tool designed specifically for schema mapping use cases. This tool analyzes database schemas, identifies field patterns, and provides insights for mapping data between different systems with varying naming conventions.
 
-## 🚀 **NEW: Configuration-Driven Field Pattern Recognition**
+## Configuration-Driven Field Pattern Recognition\*\*
 
 The profiler now features a **dynamic, configuration-driven approach** that makes it easy to:
 
@@ -11,16 +11,16 @@ The profiler now features a **dynamic, configuration-driven approach** that make
 - **Maintain consistent validation** across all patterns
 - **Customize thresholds** and patterns per field type
 
-### ✨ **Key Features**
+### **Key Features**
 
-- **🔍 Smart Pattern Recognition**: Automatically identifies field types based on column names
-- **✅ Comprehensive Validation**: Validates all identified fields (not just email)
-- **⚙️ Configuration-Driven**: Easy to modify patterns via JSON configuration
-- **🔄 Dynamic Updates**: Reload patterns without restarting the profiler
-- **📊 Consistent Insights**: Uniform validation approach across all field types
-- **🎯 Schema-Focused**: Optimized for schema mapping rather than comprehensive data analysis
+- **Smart Pattern Recognition**: Automatically identifies field types based on column names
+- **Comprehensive Validation**: Validates all identified fields (not just email)
+- **Configuration-Driven**: Easy to modify patterns via JSON configuration
+- **Dynamic Updates**: Reload patterns without restarting the profiler
+- **Consistent Insights**: Uniform validation approach across all field types
+- **Schema-Focused**: Optimized for schema mapping rather than comprehensive data analysis
 
-## 🏗️ **Architecture**
+## **Architecture**
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -49,7 +49,7 @@ The profiler now features a **dynamic, configuration-driven approach** that make
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## 📁 **Project Structure**
+## **Project Structure**
 
 ```
 llm_based/
@@ -59,10 +59,10 @@ llm_based/
 │   └── field_patterns.json          # Field pattern definitions
 ├── test_enhanced_profiler.py        # Test the enhanced system
 ├── demo_enhanced_profiler.py        # Demo the new features
-└── README.md                        # This file
+└── enhanced_schema_mapping.md       # This file
 ```
 
-## 🎯 **Field Pattern Types Supported**
+## **Field Pattern Types Supported**
 
 | Pattern Type    | Keywords              | Validation    | Description          |
 | --------------- | --------------------- | ------------- | -------------------- |
@@ -77,7 +77,7 @@ llm_based/
 | **Status**      | status, state, active | Boolean-like  | Status indicator     |
 | **Quantity**    | quantity, qty, stock  | Numeric check | Numeric quantity     |
 
-## 🚀 **Quick Start**
+## **Quick Start**
 
 ### 1. **Install Dependencies**
 
@@ -105,7 +105,7 @@ python demo_enhanced_profiler.py
 python profiler/schema_data_profiler.py
 ```
 
-## ⚙️ **Configuration**
+## **Configuration**
 
 ### **Adding New Field Types**
 
@@ -157,48 +157,48 @@ config.reload_patterns()
 config.export_patterns("my_patterns.json")
 ```
 
-## 🔍 **What the Profiler Analyzes**
+## **What the Profiler Analyzes**
 
 ### **Schema Information**
 
-- ✅ Table structures and relationships
-- ✅ Column names, types, and constraints
-- ✅ Primary keys, foreign keys, and indexes
-- ✅ Naming conventions (snake_case, PascalCase, UPPER_CASE)
+- Table structures and relationships
+- Column names, types, and constraints
+- Primary keys, foreign keys, and indexes
+- Naming conventions (snake_case, PascalCase, UPPER_CASE)
 
 ### **Field Pattern Recognition**
 
-- ✅ **Automatic field type identification** based on column names
-- ✅ **Comprehensive validation** for all identified field types
-- ✅ **Configurable validation rules** and thresholds
-- ✅ **Consistent error reporting** across all patterns
+- **Automatic field type identification** based on column names
+- **Comprehensive validation** for all identified field types
+- **Configurable validation rules** and thresholds
+- **Consistent error reporting** across all patterns
 
 ### **Mapping Insights**
 
-- ✅ Naming convention differences
-- ✅ Data type compatibility
-- ✅ Potential mapping issues
-- ✅ Complexity assessment (LOW/MEDIUM/HIGH)
+- Naming convention differences
+- Data type compatibility
+- Potential mapping issues
+- Complexity assessment (LOW/MEDIUM/HIGH)
 
-## 📊 **Sample Output**
+## **Sample Output**
 
 ```
 🔍 FIELD PATTERN CONFIGURATION INFO
 ============================================================
-📊 Total Patterns: 10
-🏷️  Pattern Types: email, phone, identifier, date, monetary, postal_code, url, name, status, quantity
-✅ Validation Types: regex, numeric, numeric_range, date_format, text_format, boolean_like
+Total Patterns: 10
+Pattern Types: email, phone, identifier, date, monetary, postal_code, url, name, status, quantity
+Validation Types: regex, numeric, numeric_range, date_format, text_format, boolean_like
 
-📋 Detailed Pattern Information:
+Detailed Pattern Information:
 
-  🏷️  email:
+    email:
      Keywords: email, mail, e-mail, email_address
      Field Type: email_field
      Validation: regex
      Threshold: 0.7
      Description: Email address format
 
-  🏷️  phone:
+    phone:
      Keywords: phone, tel, mobile, cell, phone_number
      Field Type: phone_field
      Validation: regex
@@ -206,7 +206,7 @@ config.export_patterns("my_patterns.json")
      Description: Phone number format
 ```
 
-## 🎯 **Use Cases**
+## **Use Cases**
 
 ### **Schema Mapping Projects**
 
@@ -222,7 +222,7 @@ config.export_patterns("my_patterns.json")
 - **Documentation**: Generate comprehensive schema reports
 - **Training**: Educate teams on data structures
 
-## 🔧 **Customization**
+## **Customization**
 
 ### **Adding Custom Validation Types**
 
@@ -247,14 +247,14 @@ def _custom_validation(self, value, pattern_config):
     return True  # or False
 ```
 
-## 📈 **Performance Benefits**
+## **Performance Benefits**
 
-- **⚡ Fast Pattern Recognition**: O(1) lookup for field types
-- **🔄 Efficient Validation**: Only validates identified fields
-- **💾 Memory Efficient**: Small sample data (5 rows) instead of full datasets
-- **🚀 Scalable**: Handles large numbers of tables and columns
+- **Fast Pattern Recognition**: O(1) lookup for field types
+- **Efficient Validation**: Only validates identified fields
+- **Memory Efficient**: Small sample data (5 rows) instead of full datasets
+- **Scalable**: Handles large numbers of tables and columns
 
-## 🤝 **Contributing**
+## **Contributing**
 
 To add new field patterns or validation types:
 
@@ -263,10 +263,10 @@ To add new field patterns or validation types:
 3. **Test with `test_enhanced_profiler.py`**
 4. **Document in this README**
 
-## 📝 **License**
+## **License**
 
 This project is open source and available under the MIT License.
 
 ---
 
-**🎉 The enhanced profiler now provides consistent, configurable, and maintainable field pattern recognition for all your schema mapping needs!**
+**The enhanced profiler now provides consistent, configurable, and maintainable field pattern recognition for all schema mapping needs!**
